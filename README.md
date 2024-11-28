@@ -2,7 +2,9 @@
 **2024 NCU Fall新興記憶儲存系統元件設計 Assignment 1**  
 
 1. Writing a Simple Linux Driver and Recompiling the Kernel  
-2. Collecting and Processing Temperature Data on MSP430 FR4133 using FRAM 
+2. Collecting and Processing Temperature Data on MSP430 FR4133 using FRAM
+   
+[Assignment](https://github.com/gary7102/MSP430-readTemperature/blob/main/Assignment_1.pdf)
 
 # Question 1
 
