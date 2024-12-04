@@ -59,6 +59,15 @@
                 "name": "OutOfBox_MSP430FR4133",
                 "resourceId": "/OutOfBox_MSP430FR4133/StopWatchMode.c"
             }
-        }
+        },
+	{
+	    "name": "MSP430-readTemperature/OutOfBox_MSP430FR4133 (1)",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "MSP430-readTemperature/OutOfBox_MSP430FR4133",
+                "resourceId": "MSP430-readTemperature/OutOfBox_MSP430FR4133/temperature_monitor.c"
+            }
+	}
     ]
 }
