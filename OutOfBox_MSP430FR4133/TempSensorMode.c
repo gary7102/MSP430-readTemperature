@@ -112,16 +112,13 @@ void tempSensor()
             // read temperature from FRAM
             unsigned short lastTemp = readTemperatureFromFRAM();    
 
-            // write into FRAM 
-            writeTemperatureToFRAM_celsius(*degC);
+            
+            
 
             // Display temperature on LCD
             displayTemp();
 
-            // if current_temp. > 29.0, then red LED lights up
-            checkTemperatureAndTriggerLED_C(*degC);
-            checkTemperatureAndTriggerLED_F(*degF);
-            
+  
             // P4OUT &= ~BIT0;
             P4OUT &= ~BIT0; // 將 P4.0 設為低電平，關閉 LED(green LED)
         }
@@ -174,12 +171,22 @@ void displayTemp()
         showChar('C',pos6);
         deg = *degC;
 
+        // write to fram
+        writeTemperatureToFRAM_celsius(*degC);
+        
+        // if current_temp. > 29.0 C, then red LED lights up
+        checkTemperatureAndTriggerLED_C(*degC);
     }
     else
     {
         showChar('F',pos6);
         deg = *degF;
 
+        // write to fram
+        writeTemperatureToFRAM_fahrenheit(*degF);
+
+        // if current_temp. > 83.0 F, then red LED lights up
+        checkTemperatureAndTriggerLED_F(*degF);
     }
 
     // Handle negative values

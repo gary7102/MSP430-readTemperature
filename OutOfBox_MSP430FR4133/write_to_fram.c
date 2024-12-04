@@ -5,12 +5,13 @@
 
 // #define TEMPSUM_SNAPSHOT_cel 0x1830  // 定義 FRAM_celcius 存儲溫度數據的地址
 #define TEMPSUM_SNAPSHOT_cel 0x1800
+#define TEMPSUM_SNAPSHOT_fah 0x1900
 #define VALID_FLAG_ADDRESS 0x1868  // 定義有效標記的地址
 #define VALID_FLAG_VALUE 6666  // check VALID_FLAG_ADDRESS for valid
 
 
 /* 以下為存入整數 */
-void writeTemperatureToFRAM_celsius(signed short temperature) {
+void writeTemperatureToFRAM_celsius(unsigned long temperature) {
     SYSCFG0 &= ~DFWP;                      // Disable FRAM write protection
     
     // 寫入溫度數據
@@ -23,15 +24,20 @@ void writeTemperatureToFRAM_celsius(signed short temperature) {
     
     SYSCFG0 |= DFWP;                       // Enable FRAM write protection
 }
-/*
-void writeTemperatureToFRAM_fahrenheit(signed short temperature) {
+// void writeTemperatureToFRAM_celsius(unsigned long temperature) {
+//   SYSCFG0 &= ~DFWP; // Disable FRAM write protection
+//   *(unsigned long *)FRAM_ADDRESS = temperature;
+//   SYSCFG0 |= DFWP; // Enable FRAM write protection
+// }
+
+void writeTemperatureToFRAM_fahrenheit(unsigned long temperature) {
     SYSCFG0 &= ~DFWP;                      // Disable FRAM write protection
     // *(signed short*)TEMPSUM_SNAPSHOT_fah = temperature;
     unsigned long *FRAM_write_ptr = (unsigned long *)TEMPSUM_SNAPSHOT_fah;
     *FRAM_write_ptr = temperature;         // Write temperature to FRAM
     SYSCFG0 |= DFWP;                       // Enable FRAM write protection
 }
-*/
+
 signed short readTemperatureFromFRAM() {
     // 先檢查有效標記
     signed short *valid_flag_ptr = (signed short *)VALID_FLAG_ADDRESS;

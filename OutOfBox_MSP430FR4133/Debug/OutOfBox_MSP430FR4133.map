@@ -1,10 +1,10 @@
 ******************************************************************************
-                  MSP430 Linker PC v21.6.1                     
+                  MSP430 Linker Unix v21.6.1                   
 ******************************************************************************
->> Linked Wed Dec  4 16:31:42 2024
+>> Linked Wed Dec  4 17:55:32 2024
 
 OUTPUT FILE NAME:   <OutOfBox_MSP430FR4133.out>
-ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 0000d8a2
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 0000d8a4
 
 
 MEMORY CONFIGURATION
@@ -16,7 +16,7 @@ MEMORY CONFIGURATION
   PERIPHERALS_16BIT     00000100   00000100  00000000  00000100  RWIX
   INFOA                 00001800   00000200  00000000  00000200  RWIX
   RAM                   00002000   00000800  000000e0  00000720  RWIX
-  FRAM                  0000c400   00003b80  00001710  00002470  RWIX
+  FRAM                  0000c400   00003b80  00001730  00002450  RWIX
   JTAGSIGNATURE         0000ff80   00000004  00000004  00000000  RWIX  ffff 
   BSLSIGNATURE          0000ff84   00000004  00000004  00000000  RWIX  ffff 
   INT00                 0000ff88   00000002  00000000  00000002  RWIX
@@ -118,94 +118,95 @@ section   page    origin      length       input sections
                   0000c502    0000000a     lcd_e.obj (.const:LCD_E_INIT_PARAM)
                   0000c50c    00000006     hal_LCD.obj (.const:.string:$P$T0$1)
 
-.text      0    0000c512    000015fe     
+.text      0    0000c512    0000161e     
                   0000c512    000001a8     StopWatchMode.obj (.text:displayTime)
-                  0000c6ba    00000194     TempSensorMode.obj (.text:tempSensor)
-                  0000c84e    00000184     main.obj (.text:main)
-                  0000c9d2    00000116     main.obj (.text:Init_GPIO)
-                  0000cae8    000000ee     rts430x_lc_sd_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
-                  0000cbd6    000000e4     hal_LCD.obj (.text:displayScrollText)
-                  0000ccba    000000e0     TempSensorMode.obj (.text:displayTemp)
-                  0000cd9a    000000ce     main.obj (.text:_isr:TIMER0_A0_ISR)
-                  0000ce68    000000cc     main.obj (.text:_isr:PORT2_ISR)
-                  0000cf34    000000ca     hal_LCD.obj (.text:Init_LCD)
-                  0000cffe    0000009e     lcd_e.obj (.text:LCD_E_setPinAsCOM)
-                  0000d09c    00000090     StopWatchMode.obj (.text:Inc_RTC)
-                  0000d12c    00000080     lcd_e.obj (.text:LCD_E_setPinAsLCDFunctionEx)
-                  0000d1ac    00000080     StopWatchMode.obj (.text:stopWatchModeInit)
-                  0000d22c    0000007a     hal_LCD.obj (.text:showChar)
-                  0000d2a6    00000076     main.obj (.text:_isr:RTC_ISR)
-                  0000d31c    00000074     main.obj (.text:_isr:PORT1_ISR)
-                  0000d390    0000006a     rts430x_lc_sd_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit_hold_wdt:__TI_auto_init_nobinit_nopinit_hold_wdt)
-                  0000d3fa    0000005c     timer_a.obj (.text:Timer_A_initUpMode)
-                  0000d456    00000058     rts430x_lc_sd_eabi.lib : div32u.asm.obj (.text)
-                  0000d4ae    0000004e     StopWatchMode.obj (.text:stopWatch)
-                  0000d4fc    00000040     rts430x_lc_sd_eabi.lib : cpy_util.asm.obj (.text:__memcpy_far)
-                  0000d53c    00000040                            : div32s.asm.obj (.text)
-                  0000d57c    0000003e     hal_LCD.obj (.text:clearLCD)
-                  0000d5ba    0000003c     rts430x_lc_sd_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
-                  0000d5f6    00000034     adc.obj (.text:ADC_init)
-                  0000d62a    00000034     gpio.obj (.text:GPIO_setAsPeripheralModuleFunctionInputPin)
-                  0000d65e    00000030     adc.obj (.text:ADC_configureMemory)
-                  0000d68e    00000030     cs.obj (.text:CS_turnOnXT1LF)
-                  0000d6be    0000002e     timer_a.obj (.text:Timer_A_initCompareMode)
-                  0000d6ec    0000002e     StopWatchMode.obj (.text:resetStopWatch)
-                  0000d71a    0000002c     rts430x_lc_sd_eabi.lib : div16s.asm.obj (.text)
-                  0000d746    0000002a     write_to_fram.obj (.text:writeTemperatureToFRAM_celsius)
-                  0000d770    00000028     lcd_e.obj (.text:LCD_E_init)
-                  0000d798    00000026     rts430x_lc_sd_eabi.lib : mult32.asm.obj (.text)
-                  0000d7be    00000026     TempSensorMode.obj (.text:tempSensorModeInit)
-                  0000d7e4    00000022     gpio.obj (.text:GPIO_setAsInputPinWithPullUpResistor)
-                  0000d806    00000020     adc.obj (.text:ADC_disableConversions)
-                  0000d826    00000020     gpio.obj (.text:GPIO_selectInterruptEdge)
-                  0000d846    00000020     lcd_e.obj (.text:setLCDFunction)
-                  0000d866    0000001e     gpio.obj (.text:GPIO_setAsInputPin)
-                  0000d884    0000001e     main.obj (.text:_isr:ADC_ISR)
-                  0000d8a2    0000001c     rts430x_lc_sd_eabi.lib : boot.c.obj (.text:_isr:_c_int00_noargs)
-                  0000d8be    0000001a     gpio.obj (.text:GPIO_setAsOutputPin)
-                  0000d8d8    00000018     main.obj (.text:Init_RTC)
-                  0000d8f0    00000018     write_to_fram.obj (.text:readTemperatureFromFRAM)
-                  0000d908    00000016     gpio.obj (.text:GPIO_clearInterrupt)
-                  0000d91e    00000016     gpio.obj (.text:GPIO_enableInterrupt)
-                  0000d934    00000016     gpio.obj (.text:GPIO_setOutputLowOnPin)
-                  0000d94a    00000016     wdt_a.obj (.text:WDT_A_hold)
-                  0000d960    00000016     rts430x_lc_sd_eabi.lib : div16u.asm.obj (.text)
-                  0000d976    00000014                            : mult16.asm.obj (.text)
-                  0000d98a    00000012     adc.obj (.text:ADC_startConversion)
-                  0000d99c    00000012     lcd_e.obj (.text:LCD_E_setVLCDSource)
-                  0000d9ae    00000012     pmm.obj (.text:PMM_turnOffRegulator)
-                  0000d9c0    00000012     rtc.obj (.text:RTC_start)
-                  0000d9d2    00000012     temperature_monitor.obj (.text:checkTemperatureAndTriggerLED_C)
-                  0000d9e4    00000012     temperature_monitor.obj (.text:checkTemperatureAndTriggerLED_F)
-                  0000d9f6    00000012     rts430x_lc_sd_eabi.lib : memcpy.c.obj (.text:memcpy)
-                  0000da08    00000010     pmm.obj (.text:PMM_disableInternalReference)
-                  0000da18    00000010     pmm.obj (.text:PMM_disableTempSensor)
-                  0000da28    00000010     pmm.obj (.text:PMM_enableInternalReference)
-                  0000da38    00000010     pmm.obj (.text:PMM_enableTempSensor)
-                  0000da48    0000000e     rts430x_lc_sd_eabi.lib : strlen.c.obj (.text:strlen)
-                  0000da56    0000000c     lcd_e.obj (.text:LCD_E_on)
-                  0000da62    0000000c     lcd_e.obj (.text:LCD_E_setChargePumpFreq)
-                  0000da6e    0000000c     lcd_e.obj (.text:LCD_E_setVLCDVoltage)
-                  0000da7a    0000000a     main.obj (.text:Init_Clock)
-                  0000da84    0000000a     lcd_e.obj (.text:LCD_E_selectDisplayMemory)
-                  0000da8e    0000000a     rtc.obj (.text:RTC_enableInterrupt)
-                  0000da98    0000000a     rts430x_lc_sd_eabi.lib : lsl16.asm.obj (.text)
-                  0000daa2    0000000a                            : lsr16.asm.obj (.text)
-                  0000daac    00000008     adc.obj (.text:ADC_clearInterrupt)
-                  0000dab4    00000008     adc.obj (.text:ADC_disable)
-                  0000dabc    00000008     adc.obj (.text:ADC_enable)
-                  0000dac4    00000008     adc.obj (.text:ADC_enableInterrupt)
-                  0000dacc    00000008     lcd_e.obj (.text:LCD_E_enableChargePump)
-                  0000dad4    00000008     rtc.obj (.text:RTC_stop)
-                  0000dadc    00000008     timer_a.obj (.text:Timer_A_stop)
-                  0000dae4    00000008     rts430x_lc_sd_eabi.lib : isr_trap.asm.obj (.text:_isr:__TI_ISR_TRAP)
-                  0000daec    00000006     lcd_e.obj (.text:LCD_E_clearAllMemory)
-                  0000daf2    00000006     pmm.obj (.text:PMM_unlockLPM5)
-                  0000daf8    00000006     rtc.obj (.text:RTC_setModulo)
-                  0000dafe    00000006     timer_a.obj (.text:Timer_A_startCounter)
-                  0000db04    00000006     rts430x_lc_sd_eabi.lib : exit.c.obj (.text:abort)
-                  0000db0a    00000004                            : pre_init.c.obj (.text:_system_pre_init)
-                  0000db0e    00000002                            : startup.c.obj (.text:_system_post_cinit)
+                  0000c6ba    00000184     main.obj (.text:main)
+                  0000c83e    00000176     TempSensorMode.obj (.text:tempSensor)
+                  0000c9b4    00000116     main.obj (.text:Init_GPIO)
+                  0000caca    00000108     TempSensorMode.obj (.text:displayTemp)
+                  0000cbd2    000000ee     rts430x_lc_sd_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  0000ccc0    000000e4     hal_LCD.obj (.text:displayScrollText)
+                  0000cda4    000000ce     main.obj (.text:_isr:TIMER0_A0_ISR)
+                  0000ce72    000000cc     main.obj (.text:_isr:PORT2_ISR)
+                  0000cf3e    000000ca     hal_LCD.obj (.text:Init_LCD)
+                  0000d008    0000009e     lcd_e.obj (.text:LCD_E_setPinAsCOM)
+                  0000d0a6    00000090     StopWatchMode.obj (.text:Inc_RTC)
+                  0000d136    00000080     lcd_e.obj (.text:LCD_E_setPinAsLCDFunctionEx)
+                  0000d1b6    00000080     StopWatchMode.obj (.text:stopWatchModeInit)
+                  0000d236    0000007a     hal_LCD.obj (.text:showChar)
+                  0000d2b0    00000076     main.obj (.text:_isr:RTC_ISR)
+                  0000d326    00000074     main.obj (.text:_isr:PORT1_ISR)
+                  0000d39a    0000006a     rts430x_lc_sd_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit_hold_wdt:__TI_auto_init_nobinit_nopinit_hold_wdt)
+                  0000d404    0000005c     timer_a.obj (.text:Timer_A_initUpMode)
+                  0000d460    00000058     rts430x_lc_sd_eabi.lib : div32u.asm.obj (.text)
+                  0000d4b8    0000004e     StopWatchMode.obj (.text:stopWatch)
+                  0000d506    00000040     rts430x_lc_sd_eabi.lib : cpy_util.asm.obj (.text:__memcpy_far)
+                  0000d546    00000040                            : div32s.asm.obj (.text)
+                  0000d586    0000003e     hal_LCD.obj (.text:clearLCD)
+                  0000d5c4    0000003c     rts430x_lc_sd_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  0000d600    00000034     adc.obj (.text:ADC_init)
+                  0000d634    00000034     gpio.obj (.text:GPIO_setAsPeripheralModuleFunctionInputPin)
+                  0000d668    00000030     adc.obj (.text:ADC_configureMemory)
+                  0000d698    00000030     cs.obj (.text:CS_turnOnXT1LF)
+                  0000d6c8    0000002e     timer_a.obj (.text:Timer_A_initCompareMode)
+                  0000d6f6    0000002e     StopWatchMode.obj (.text:resetStopWatch)
+                  0000d724    0000002c     rts430x_lc_sd_eabi.lib : div16s.asm.obj (.text)
+                  0000d750    00000028     lcd_e.obj (.text:LCD_E_init)
+                  0000d778    00000026     rts430x_lc_sd_eabi.lib : mult32.asm.obj (.text)
+                  0000d79e    00000026     TempSensorMode.obj (.text:tempSensorModeInit)
+                  0000d7c4    00000022     gpio.obj (.text:GPIO_setAsInputPinWithPullUpResistor)
+                  0000d7e6    00000022     write_to_fram.obj (.text:writeTemperatureToFRAM_celsius)
+                  0000d808    00000020     adc.obj (.text:ADC_disableConversions)
+                  0000d828    00000020     gpio.obj (.text:GPIO_selectInterruptEdge)
+                  0000d848    00000020     lcd_e.obj (.text:setLCDFunction)
+                  0000d868    0000001e     gpio.obj (.text:GPIO_setAsInputPin)
+                  0000d886    0000001e     main.obj (.text:_isr:ADC_ISR)
+                  0000d8a4    0000001c     rts430x_lc_sd_eabi.lib : boot.c.obj (.text:_isr:_c_int00_noargs)
+                  0000d8c0    0000001a     gpio.obj (.text:GPIO_setAsOutputPin)
+                  0000d8da    00000018     main.obj (.text:Init_RTC)
+                  0000d8f2    00000018     write_to_fram.obj (.text:readTemperatureFromFRAM)
+                  0000d90a    00000016     gpio.obj (.text:GPIO_clearInterrupt)
+                  0000d920    00000016     gpio.obj (.text:GPIO_enableInterrupt)
+                  0000d936    00000016     gpio.obj (.text:GPIO_setOutputLowOnPin)
+                  0000d94c    00000016     wdt_a.obj (.text:WDT_A_hold)
+                  0000d962    00000016     temperature_monitor.obj (.text:checkTemperatureAndTriggerLED_C)
+                  0000d978    00000016     temperature_monitor.obj (.text:checkTemperatureAndTriggerLED_F)
+                  0000d98e    00000016     rts430x_lc_sd_eabi.lib : div16u.asm.obj (.text)
+                  0000d9a4    00000016     write_to_fram.obj (.text:writeTemperatureToFRAM_fahrenheit)
+                  0000d9ba    00000014     rts430x_lc_sd_eabi.lib : mult16.asm.obj (.text)
+                  0000d9ce    00000012     adc.obj (.text:ADC_startConversion)
+                  0000d9e0    00000012     lcd_e.obj (.text:LCD_E_setVLCDSource)
+                  0000d9f2    00000012     pmm.obj (.text:PMM_turnOffRegulator)
+                  0000da04    00000012     rtc.obj (.text:RTC_start)
+                  0000da16    00000012     rts430x_lc_sd_eabi.lib : memcpy.c.obj (.text:memcpy)
+                  0000da28    00000010     pmm.obj (.text:PMM_disableInternalReference)
+                  0000da38    00000010     pmm.obj (.text:PMM_disableTempSensor)
+                  0000da48    00000010     pmm.obj (.text:PMM_enableInternalReference)
+                  0000da58    00000010     pmm.obj (.text:PMM_enableTempSensor)
+                  0000da68    0000000e     rts430x_lc_sd_eabi.lib : strlen.c.obj (.text:strlen)
+                  0000da76    0000000c     lcd_e.obj (.text:LCD_E_on)
+                  0000da82    0000000c     lcd_e.obj (.text:LCD_E_setChargePumpFreq)
+                  0000da8e    0000000c     lcd_e.obj (.text:LCD_E_setVLCDVoltage)
+                  0000da9a    0000000a     main.obj (.text:Init_Clock)
+                  0000daa4    0000000a     lcd_e.obj (.text:LCD_E_selectDisplayMemory)
+                  0000daae    0000000a     rtc.obj (.text:RTC_enableInterrupt)
+                  0000dab8    0000000a     rts430x_lc_sd_eabi.lib : lsl16.asm.obj (.text)
+                  0000dac2    0000000a                            : lsr16.asm.obj (.text)
+                  0000dacc    00000008     adc.obj (.text:ADC_clearInterrupt)
+                  0000dad4    00000008     adc.obj (.text:ADC_disable)
+                  0000dadc    00000008     adc.obj (.text:ADC_enable)
+                  0000dae4    00000008     adc.obj (.text:ADC_enableInterrupt)
+                  0000daec    00000008     lcd_e.obj (.text:LCD_E_enableChargePump)
+                  0000daf4    00000008     rtc.obj (.text:RTC_stop)
+                  0000dafc    00000008     timer_a.obj (.text:Timer_A_stop)
+                  0000db04    00000008     rts430x_lc_sd_eabi.lib : isr_trap.asm.obj (.text:_isr:__TI_ISR_TRAP)
+                  0000db0c    00000006     lcd_e.obj (.text:LCD_E_clearAllMemory)
+                  0000db12    00000006     pmm.obj (.text:PMM_unlockLPM5)
+                  0000db18    00000006     rtc.obj (.text:RTC_setModulo)
+                  0000db1e    00000006     timer_a.obj (.text:Timer_A_startCounter)
+                  0000db24    00000006     rts430x_lc_sd_eabi.lib : exit.c.obj (.text:abort)
+                  0000db2a    00000004                            : pre_init.c.obj (.text:_system_pre_init)
+                  0000db2e    00000002                            : startup.c.obj (.text:_system_post_cinit)
 
 .data      0    00002000    00000040     UNINITIALIZED
                   00002000    0000000e     main.obj (.data:initUpParam_A0)
@@ -278,17 +279,17 @@ MODULE SUMMARY
 
        Module                       code   ro data   rw data
        ------                       ----   -------   -------
-    .\
+    ./
        main.obj                     1374   52        26     
        StopWatchMode.obj            820    16        10     
-       TempSensorMode.obj           666    16        28     
+       TempSensorMode.obj           676    16        28     
        hal_LCD.obj                  614    78        0      
-       write_to_fram.obj            66     0         0      
-       temperature_monitor.obj      36     0         0      
+       write_to_fram.obj            80     0         0      
+       temperature_monitor.obj      44     0         0      
     +--+----------------------------+------+---------+---------+
-       Total:                       3576   162       64     
+       Total:                       3608   162       64     
                                                             
-    .\driverlib\MSP430FR2xx_4xx\
+    ./driverlib/MSP430FR2xx_4xx/
        lcd_e.obj                    436    10        0      
        gpio.obj                     240    28        0      
        adc.obj                      182    0         0      
@@ -300,7 +301,7 @@ MODULE SUMMARY
     +--+----------------------------+------+---------+---------+
        Total:                       1210   38        0      
                                                             
-    D:\ti\ccstheia151\ccs\tools\compiler\ti-cgt-msp430_21.6.1.LTS\lib\rts430x_lc_sd_eabi.lib
+    /Applications/ti/ccstheia151/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/lib/rts430x_lc_sd_eabi.lib
        copy_decompress_lzss.c.obj   238    0         0      
        autoinit.c.obj               106    0         0      
        div32u.asm.obj               88     0         0      
@@ -335,7 +336,7 @@ MODULE SUMMARY
        Stack:                       0      0         160    
        Linker Generated:            0      83        0      
     +--+----------------------------+------+---------+---------+
-       Grand Total:                 5630   303       224    
+       Grand Total:                 5662   303       224    
 
 
 LINKER GENERATED COPY TABLES
@@ -385,15 +386,15 @@ address   name
 00000712  ADCMEM0                                   
 00000713  ADCMEM0_H                                 
 00000712  ADCMEM0_L                                 
-0000d884  ADC_ISR                                   
-0000daac  ADC_clearInterrupt                        
-0000d65e  ADC_configureMemory                       
-0000dab4  ADC_disable                               
-0000d806  ADC_disableConversions                    
-0000dabc  ADC_enable                                
-0000dac4  ADC_enableInterrupt                       
-0000d5f6  ADC_init                                  
-0000d98a  ADC_startConversion                       
+0000d886  ADC_ISR                                   
+0000dacc  ADC_clearInterrupt                        
+0000d668  ADC_configureMemory                       
+0000dad4  ADC_disable                               
+0000d808  ADC_disableConversions                    
+0000dadc  ADC_enable                                
+0000dae4  ADC_enableInterrupt                       
+0000d600  ADC_init                                  
+0000d9ce  ADC_startConversion                       
 00000660  BAKMEM0                                   
 00000661  BAKMEM0_H                                 
 00000660  BAKMEM0_L                                 
@@ -442,7 +443,7 @@ address   name
 00000672  BAKMEM9                                   
 00000673  BAKMEM9_H                                 
 00000672  BAKMEM9_L                                 
-0000db04  C$$EXIT                                   
+0000db24  C$$EXIT                                   
 000002ee  CAPTIO0CTL                                
 000002ef  CAPTIO0CTL_H                              
 000002ee  CAPTIO0CTL_L                              
@@ -485,7 +486,7 @@ address   name
 00000190  CSCTL8                                    
 00000191  CSCTL8_H                                  
 00000190  CSCTL8_L                                  
-0000d68e  CS_turnOnXT1LF                            
+0000d698  CS_turnOnXT1LF                            
 00002028  Centiseconds                              
 000001a0  FRCTL0                                    
 000001a1  FRCTL0_H                                  
@@ -496,20 +497,20 @@ address   name
 000001a6  GCCTL1                                    
 000001a7  GCCTL1_H                                  
 000001a6  GCCTL1_L                                  
-0000d908  GPIO_clearInterrupt                       
-0000d91e  GPIO_enableInterrupt                      
-0000d826  GPIO_selectInterruptEdge                  
-0000d866  GPIO_setAsInputPin                        
-0000d7e4  GPIO_setAsInputPinWithPullUpResistor      
-0000d8be  GPIO_setAsOutputPin                       
-0000d62a  GPIO_setAsPeripheralModuleFunctionInputPin
-0000d934  GPIO_setOutputLowOnPin                    
+0000d90a  GPIO_clearInterrupt                       
+0000d920  GPIO_enableInterrupt                      
+0000d828  GPIO_selectInterruptEdge                  
+0000d868  GPIO_setAsInputPin                        
+0000d7c4  GPIO_setAsInputPinWithPullUpResistor      
+0000d8c0  GPIO_setAsOutputPin                       
+0000d634  GPIO_setAsPeripheralModuleFunctionInputPin
+0000d936  GPIO_setOutputLowOnPin                    
 0000202e  Hours                                     
-0000d09c  Inc_RTC                                   
-0000da7a  Init_Clock                                
-0000c9d2  Init_GPIO                                 
-0000cf34  Init_LCD                                  
-0000d8d8  Init_RTC                                  
+0000d0a6  Inc_RTC                                   
+0000da9a  Init_Clock                                
+0000c9b4  Init_GPIO                                 
+0000cf3e  Init_LCD                                  
+0000d8da  Init_RTC                                  
 00000604  LCDBLKCTL                                 
 00000605  LCDBLKCTL_H                               
 00000604  LCDBLKCTL_L                               
@@ -635,16 +636,16 @@ address   name
 00000609  LCDVCTL_H                                 
 00000608  LCDVCTL_L                                 
 0000c502  LCD_E_INIT_PARAM                          
-0000daec  LCD_E_clearAllMemory                      
-0000dacc  LCD_E_enableChargePump                    
-0000d770  LCD_E_init                                
-0000da56  LCD_E_on                                  
-0000da84  LCD_E_selectDisplayMemory                 
-0000da62  LCD_E_setChargePumpFreq                   
-0000cffe  LCD_E_setPinAsCOM                         
-0000d12c  LCD_E_setPinAsLCDFunctionEx               
-0000d99c  LCD_E_setVLCDSource                       
-0000da6e  LCD_E_setVLCDVoltage                      
+0000db0c  LCD_E_clearAllMemory                      
+0000daec  LCD_E_enableChargePump                    
+0000d750  LCD_E_init                                
+0000da76  LCD_E_on                                  
+0000daa4  LCD_E_selectDisplayMemory                 
+0000da82  LCD_E_setChargePumpFreq                   
+0000d008  LCD_E_setPinAsCOM                         
+0000d136  LCD_E_setPinAsLCDFunctionEx               
+0000d9e0  LCD_E_setVLCDSource                       
+0000da8e  LCD_E_setVLCDVoltage                      
 0000202c  Minutes                                   
 0000020e  P1IV                                      
 0000021e  P2IV                                      
@@ -735,14 +736,14 @@ address   name
 0000012a  PMMIFG                                    
 0000012b  PMMIFG_H                                  
 0000012a  PMMIFG_L                                  
-0000da08  PMM_disableInternalReference              
-0000da18  PMM_disableTempSensor                     
-0000da28  PMM_enableInternalReference               
-0000da38  PMM_enableTempSensor                      
-0000d9ae  PMM_turnOffRegulator                      
-0000daf2  PMM_unlockLPM5                            
-0000d31c  PORT1_ISR                                 
-0000ce68  PORT2_ISR                                 
+0000da28  PMM_disableInternalReference              
+0000da38  PMM_disableTempSensor                     
+0000da48  PMM_enableInternalReference               
+0000da58  PMM_enableTempSensor                      
+0000d9f2  PMM_turnOffRegulator                      
+0000db12  PMM_unlockLPM5                            
+0000d326  PORT1_ISR                                 
+0000ce72  PORT2_ISR                                 
 000003cc  RTCCNT                                    
 000003cd  RTCCNT_H                                  
 000003cc  RTCCNT_L                                  
@@ -755,11 +756,11 @@ address   name
 000003c8  RTCMOD                                    
 000003c9  RTCMOD_H                                  
 000003c8  RTCMOD_L                                  
-0000d2a6  RTC_ISR                                   
-0000da8e  RTC_enableInterrupt                       
-0000daf8  RTC_setModulo                             
-0000d9c0  RTC_start                                 
-0000dad4  RTC_stop                                  
+0000d2b0  RTC_ISR                                   
+0000daae  RTC_enableInterrupt                       
+0000db18  RTC_setModulo                             
+0000da04  RTC_start                                 
+0000daf4  RTC_stop                                  
 0000201c  S1buttonDebounce                          
 0000201e  S2buttonDebounce                          
 00000100  SFRIE1                                    
@@ -834,11 +835,11 @@ address   name
 00000360  TA1EX0                                    
 0000036e  TA1IV                                     
 00000350  TA1R                                      
-0000cd9a  TIMER0_A0_ISR                             
-0000d6be  Timer_A_initCompareMode                   
-0000d3fa  Timer_A_initUpMode                        
-0000dafe  Timer_A_startCounter                      
-0000dadc  Timer_A_stop                              
+0000cda4  TIMER0_A0_ISR                             
+0000d6c8  Timer_A_initCompareMode                   
+0000d404  Timer_A_initUpMode                        
+0000db1e  Timer_A_startCounter                      
+0000dafc  Timer_A_stop                              
 00000510  UCA0ABCTL                                 
 00000506  UCA0BRW                                   
 00000507  UCA0BRW_H                                 
@@ -921,7 +922,7 @@ address   name
 000001cc  WDTCTL                                    
 000001cd  WDTCTL_H                                  
 000001cc  WDTCTL_L                                  
-0000d94a  WDT_A_hold                                
+0000d94c  WDT_A_hold                                
 00002800  __STACK_END                               
 000000a0  __STACK_SIZE                              
 0000c44c  __TI_CINIT_Base                           
@@ -929,10 +930,10 @@ address   name
 0000c454  __TI_CINIT_Warm                           
 0000c444  __TI_Handler_Table_Base                   
 0000c44c  __TI_Handler_Table_Limit                  
-0000dae4  __TI_ISR_TRAP                             
-0000d390  __TI_auto_init_nobinit_nopinit_hold_wdt   
-0000cae8  __TI_decompress_lzss                      
-0000d5ba  __TI_decompress_none                      
+0000db04  __TI_ISR_TRAP                             
+0000d39a  __TI_auto_init_nobinit_nopinit_hold_wdt   
+0000cbd2  __TI_decompress_lzss                      
+0000d5c4  __TI_decompress_none                      
 0000ffe2  __TI_int45                                
 0000ffe4  __TI_int46                                
 0000ffe6  __TI_int47                                
@@ -951,57 +952,58 @@ ffffffff  __TI_pprof_out_hndl
 ffffffff  __TI_prof_data_size                       
 ffffffff  __TI_prof_data_start                      
 ffffffff  __c_args__                                
-0000d4fc  __memcpy_far                              
-0000d71a  __mspabi_divi                             
-0000d53c  __mspabi_divli                            
-0000d960  __mspabi_divu                             
-0000d456  __mspabi_divul                            
-0000d976  __mspabi_mpyi                             
-0000d976  __mspabi_mpyi_sw                          
-0000d798  __mspabi_mpyl                             
-0000d798  __mspabi_mpyl_sw                          
-0000d71a  __mspabi_remi                             
-0000d53c  __mspabi_remli                            
-0000d960  __mspabi_remu                             
-0000d456  __mspabi_remul                            
-0000da98  __mspabi_slli                             
-0000daa2  __mspabi_srli                             
-0000d8a2  _c_int00_noargs                           
+0000d506  __memcpy_far                              
+0000d724  __mspabi_divi                             
+0000d546  __mspabi_divli                            
+0000d98e  __mspabi_divu                             
+0000d460  __mspabi_divul                            
+0000d9ba  __mspabi_mpyi                             
+0000d9ba  __mspabi_mpyi_sw                          
+0000d778  __mspabi_mpyl                             
+0000d778  __mspabi_mpyl_sw                          
+0000d724  __mspabi_remi                             
+0000d546  __mspabi_remli                            
+0000d98e  __mspabi_remu                             
+0000d460  __mspabi_remul                            
+0000dab8  __mspabi_slli                             
+0000dac2  __mspabi_srli                             
+0000d8a4  _c_int00_noargs                           
 0000fffe  _reset_vector                             
 00002760  _stack                                    
-0000db0e  _system_post_cinit                        
-0000db0a  _system_pre_init                          
-0000db04  abort                                     
+0000db2e  _system_post_cinit                        
+0000db2a  _system_pre_init                          
+0000db24  abort                                     
 0000c454  alphabetBig                               
-0000d9d2  checkTemperatureAndTriggerLED_C           
-0000d9e4  checkTemperatureAndTriggerLED_F           
-0000d57c  clearLCD                                  
+0000d962  checkTemperatureAndTriggerLED_C           
+0000d978  checkTemperatureAndTriggerLED_F           
+0000d586  clearLCD                                  
 00002030  count                                     
 0000203c  degC                                      
 0000203e  degF                                      
 0000c4ce  digit                                     
-0000cbd6  displayScrollText                         
-0000ccba  displayTemp                               
+0000ccc0  displayScrollText                         
+0000caca  displayTemp                               
 0000c512  displayTime                               
 00002026  holdCount                                 
 00002032  initCompParam                             
 00002000  initUpParam_A0                            
 0000200e  initUpParam_A1                            
-0000c84e  main                                      
-0000d9f6  memcpy                                    
+0000c6ba  main                                      
+0000da16  memcpy                                    
 00002024  mode                                      
-0000d8f0  readTemperatureFromFRAM                   
-0000d6ec  resetStopWatch                            
-0000d22c  showChar                                  
-0000d4ae  stopWatch                                 
-0000d1ac  stopWatchModeInit                         
+0000d8f2  readTemperatureFromFRAM                   
+0000d6f6  resetStopWatch                            
+0000d236  showChar                                  
+0000d4b8  stopWatch                                 
+0000d1b6  stopWatchModeInit                         
 00002020  stopWatchRunning                          
-0000da48  strlen                                    
-0000c6ba  tempSensor                                
-0000d7be  tempSensorModeInit                        
+0000da68  strlen                                    
+0000c83e  tempSensor                                
+0000d79e  tempSensorModeInit                        
 00002022  tempSensorRunning                         
 0000203a  tempUnit                                  
-0000d746  writeTemperatureToFRAM_celsius            
+0000d7e6  writeTemperatureToFRAM_celsius            
+0000d9a4  writeTemperatureToFRAM_fahrenheit         
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -1544,98 +1546,99 @@ address   name
 0000c4ce  digit                                     
 0000c502  LCD_E_INIT_PARAM                          
 0000c512  displayTime                               
-0000c6ba  tempSensor                                
-0000c84e  main                                      
-0000c9d2  Init_GPIO                                 
-0000cae8  __TI_decompress_lzss                      
-0000cbd6  displayScrollText                         
-0000ccba  displayTemp                               
-0000cd9a  TIMER0_A0_ISR                             
-0000ce68  PORT2_ISR                                 
-0000cf34  Init_LCD                                  
-0000cffe  LCD_E_setPinAsCOM                         
-0000d09c  Inc_RTC                                   
-0000d12c  LCD_E_setPinAsLCDFunctionEx               
-0000d1ac  stopWatchModeInit                         
-0000d22c  showChar                                  
-0000d2a6  RTC_ISR                                   
-0000d31c  PORT1_ISR                                 
-0000d390  __TI_auto_init_nobinit_nopinit_hold_wdt   
-0000d3fa  Timer_A_initUpMode                        
-0000d456  __mspabi_divul                            
-0000d456  __mspabi_remul                            
-0000d4ae  stopWatch                                 
-0000d4fc  __memcpy_far                              
-0000d53c  __mspabi_divli                            
-0000d53c  __mspabi_remli                            
-0000d57c  clearLCD                                  
-0000d5ba  __TI_decompress_none                      
-0000d5f6  ADC_init                                  
-0000d62a  GPIO_setAsPeripheralModuleFunctionInputPin
-0000d65e  ADC_configureMemory                       
-0000d68e  CS_turnOnXT1LF                            
-0000d6be  Timer_A_initCompareMode                   
-0000d6ec  resetStopWatch                            
-0000d71a  __mspabi_divi                             
-0000d71a  __mspabi_remi                             
-0000d746  writeTemperatureToFRAM_celsius            
-0000d770  LCD_E_init                                
-0000d798  __mspabi_mpyl                             
-0000d798  __mspabi_mpyl_sw                          
-0000d7be  tempSensorModeInit                        
-0000d7e4  GPIO_setAsInputPinWithPullUpResistor      
-0000d806  ADC_disableConversions                    
-0000d826  GPIO_selectInterruptEdge                  
-0000d866  GPIO_setAsInputPin                        
-0000d884  ADC_ISR                                   
-0000d8a2  _c_int00_noargs                           
-0000d8be  GPIO_setAsOutputPin                       
-0000d8d8  Init_RTC                                  
-0000d8f0  readTemperatureFromFRAM                   
-0000d908  GPIO_clearInterrupt                       
-0000d91e  GPIO_enableInterrupt                      
-0000d934  GPIO_setOutputLowOnPin                    
-0000d94a  WDT_A_hold                                
-0000d960  __mspabi_divu                             
-0000d960  __mspabi_remu                             
-0000d976  __mspabi_mpyi                             
-0000d976  __mspabi_mpyi_sw                          
-0000d98a  ADC_startConversion                       
-0000d99c  LCD_E_setVLCDSource                       
-0000d9ae  PMM_turnOffRegulator                      
-0000d9c0  RTC_start                                 
-0000d9d2  checkTemperatureAndTriggerLED_C           
-0000d9e4  checkTemperatureAndTriggerLED_F           
-0000d9f6  memcpy                                    
-0000da08  PMM_disableInternalReference              
-0000da18  PMM_disableTempSensor                     
-0000da28  PMM_enableInternalReference               
-0000da38  PMM_enableTempSensor                      
-0000da48  strlen                                    
-0000da56  LCD_E_on                                  
-0000da62  LCD_E_setChargePumpFreq                   
-0000da6e  LCD_E_setVLCDVoltage                      
-0000da7a  Init_Clock                                
-0000da84  LCD_E_selectDisplayMemory                 
-0000da8e  RTC_enableInterrupt                       
-0000da98  __mspabi_slli                             
-0000daa2  __mspabi_srli                             
-0000daac  ADC_clearInterrupt                        
-0000dab4  ADC_disable                               
-0000dabc  ADC_enable                                
-0000dac4  ADC_enableInterrupt                       
-0000dacc  LCD_E_enableChargePump                    
-0000dad4  RTC_stop                                  
-0000dadc  Timer_A_stop                              
-0000dae4  __TI_ISR_TRAP                             
-0000daec  LCD_E_clearAllMemory                      
-0000daf2  PMM_unlockLPM5                            
-0000daf8  RTC_setModulo                             
-0000dafe  Timer_A_startCounter                      
-0000db04  C$$EXIT                                   
-0000db04  abort                                     
-0000db0a  _system_pre_init                          
-0000db0e  _system_post_cinit                        
+0000c6ba  main                                      
+0000c83e  tempSensor                                
+0000c9b4  Init_GPIO                                 
+0000caca  displayTemp                               
+0000cbd2  __TI_decompress_lzss                      
+0000ccc0  displayScrollText                         
+0000cda4  TIMER0_A0_ISR                             
+0000ce72  PORT2_ISR                                 
+0000cf3e  Init_LCD                                  
+0000d008  LCD_E_setPinAsCOM                         
+0000d0a6  Inc_RTC                                   
+0000d136  LCD_E_setPinAsLCDFunctionEx               
+0000d1b6  stopWatchModeInit                         
+0000d236  showChar                                  
+0000d2b0  RTC_ISR                                   
+0000d326  PORT1_ISR                                 
+0000d39a  __TI_auto_init_nobinit_nopinit_hold_wdt   
+0000d404  Timer_A_initUpMode                        
+0000d460  __mspabi_divul                            
+0000d460  __mspabi_remul                            
+0000d4b8  stopWatch                                 
+0000d506  __memcpy_far                              
+0000d546  __mspabi_divli                            
+0000d546  __mspabi_remli                            
+0000d586  clearLCD                                  
+0000d5c4  __TI_decompress_none                      
+0000d600  ADC_init                                  
+0000d634  GPIO_setAsPeripheralModuleFunctionInputPin
+0000d668  ADC_configureMemory                       
+0000d698  CS_turnOnXT1LF                            
+0000d6c8  Timer_A_initCompareMode                   
+0000d6f6  resetStopWatch                            
+0000d724  __mspabi_divi                             
+0000d724  __mspabi_remi                             
+0000d750  LCD_E_init                                
+0000d778  __mspabi_mpyl                             
+0000d778  __mspabi_mpyl_sw                          
+0000d79e  tempSensorModeInit                        
+0000d7c4  GPIO_setAsInputPinWithPullUpResistor      
+0000d7e6  writeTemperatureToFRAM_celsius            
+0000d808  ADC_disableConversions                    
+0000d828  GPIO_selectInterruptEdge                  
+0000d868  GPIO_setAsInputPin                        
+0000d886  ADC_ISR                                   
+0000d8a4  _c_int00_noargs                           
+0000d8c0  GPIO_setAsOutputPin                       
+0000d8da  Init_RTC                                  
+0000d8f2  readTemperatureFromFRAM                   
+0000d90a  GPIO_clearInterrupt                       
+0000d920  GPIO_enableInterrupt                      
+0000d936  GPIO_setOutputLowOnPin                    
+0000d94c  WDT_A_hold                                
+0000d962  checkTemperatureAndTriggerLED_C           
+0000d978  checkTemperatureAndTriggerLED_F           
+0000d98e  __mspabi_divu                             
+0000d98e  __mspabi_remu                             
+0000d9a4  writeTemperatureToFRAM_fahrenheit         
+0000d9ba  __mspabi_mpyi                             
+0000d9ba  __mspabi_mpyi_sw                          
+0000d9ce  ADC_startConversion                       
+0000d9e0  LCD_E_setVLCDSource                       
+0000d9f2  PMM_turnOffRegulator                      
+0000da04  RTC_start                                 
+0000da16  memcpy                                    
+0000da28  PMM_disableInternalReference              
+0000da38  PMM_disableTempSensor                     
+0000da48  PMM_enableInternalReference               
+0000da58  PMM_enableTempSensor                      
+0000da68  strlen                                    
+0000da76  LCD_E_on                                  
+0000da82  LCD_E_setChargePumpFreq                   
+0000da8e  LCD_E_setVLCDVoltage                      
+0000da9a  Init_Clock                                
+0000daa4  LCD_E_selectDisplayMemory                 
+0000daae  RTC_enableInterrupt                       
+0000dab8  __mspabi_slli                             
+0000dac2  __mspabi_srli                             
+0000dacc  ADC_clearInterrupt                        
+0000dad4  ADC_disable                               
+0000dadc  ADC_enable                                
+0000dae4  ADC_enableInterrupt                       
+0000daec  LCD_E_enableChargePump                    
+0000daf4  RTC_stop                                  
+0000dafc  Timer_A_stop                              
+0000db04  __TI_ISR_TRAP                             
+0000db0c  LCD_E_clearAllMemory                      
+0000db12  PMM_unlockLPM5                            
+0000db18  RTC_setModulo                             
+0000db1e  Timer_A_startCounter                      
+0000db24  C$$EXIT                                   
+0000db24  abort                                     
+0000db2a  _system_pre_init                          
+0000db2e  _system_post_cinit                        
 0000ffe2  __TI_int45                                
 0000ffe4  __TI_int46                                
 0000ffe6  __TI_int47                                
@@ -1656,4 +1659,4 @@ ffffffff  __TI_prof_data_size
 ffffffff  __TI_prof_data_start                      
 ffffffff  __c_args__                                
 
-[647 symbols]
+[648 symbols]
