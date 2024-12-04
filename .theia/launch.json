@@ -1,0 +1,64 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "CCS Debug",
+            "type": "ccs-debug",
+            "request": "launch"
+        },
+        {
+            "name": "OutOfBox_MSP430FR4133 (1)",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "OutOfBox_MSP430FR4133",
+                "resourceId": "/OutOfBox_MSP430FR4133/write_to_fram.c"
+            }
+        },
+        {
+            "name": "OutOfBox_MSP430FR4133 (2)",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "OutOfBox_MSP430FR4133",
+                "resourceId": "/OutOfBox_MSP430FR4133/TempSensorMode.c"
+            }
+        },
+        {
+            "name": "OutOfBox_MSP430FR4133 (3)",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "OutOfBox_MSP430FR4133",
+                "resourceId": "/OutOfBox_MSP430FR4133/write_to_fram.h"
+            }
+        },
+        {
+            "name": "OutOfBox_MSP430FR4133 (4)",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "OutOfBox_MSP430FR4133",
+                "resourceId": "/OutOfBox_MSP430FR4133/temperature_monitor.c"
+            }
+        },
+        {
+            "name": "OutOfBox_MSP430FR4133 (5)",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "OutOfBox_MSP430FR4133",
+                "resourceId": "/OutOfBox_MSP430FR4133/temperature_monitor.h"
+            }
+        },
+        {
+            "name": "OutOfBox_MSP430FR4133 (6)",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "OutOfBox_MSP430FR4133",
+                "resourceId": "/OutOfBox_MSP430FR4133/StopWatchMode.c"
+            }
+        }
+    ]
+}
