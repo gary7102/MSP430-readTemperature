@@ -1,8 +1,10 @@
 # Intro
-**2024 NCU Fall新興記憶儲存系統元件設計 Assignment 1**  
+**2024 NCU Fall 新興記憶儲存系統元件設計 Assignment 1**  
 
 1. Writing a Simple Linux Driver and Recompiling the Kernel  
 2. Collecting and Processing Temperature Data on MSP430 FR4133 using FRAM 
+
+Assignment: [Link](https://github.com/gary7102/MSP430-readTemperature/blob/main/Assignment_1.pdf)
 
 # Question 1
 
@@ -180,7 +182,7 @@ dmesg | grep "Hello, world!"
 
 # Question 2
 
-文件最後有[Demo](##Demo)
+文件最後有[Demo](##Demo)，github[連結](https://github.com/gary7102/MSP430-readTemperature.git)
 
 這題我們需要去，[CCSSTUDIO](https://www.ti.com/tool/CCSTUDIO#downloads) 下載`CCSTUDIO-THEIA`，因為舊版的`CCSTUDIO` somehow不知道為甚麼build不出來，
 
