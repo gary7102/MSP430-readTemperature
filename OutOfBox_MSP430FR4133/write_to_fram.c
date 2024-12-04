@@ -24,11 +24,6 @@ void writeTemperatureToFRAM_celsius(unsigned long temperature) {
     
     SYSCFG0 |= DFWP;                       // Enable FRAM write protection
 }
-// void writeTemperatureToFRAM_celsius(unsigned long temperature) {
-//   SYSCFG0 &= ~DFWP; // Disable FRAM write protection
-//   *(unsigned long *)FRAM_ADDRESS = temperature;
-//   SYSCFG0 |= DFWP; // Enable FRAM write protection
-// }
 
 void writeTemperatureToFRAM_fahrenheit(unsigned long temperature) {
     SYSCFG0 &= ~DFWP;                      // Disable FRAM write protection
