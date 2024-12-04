@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVariant value="50:Theia-based"/>
+	<ccsVersion value="51.5.0"/>
+	<deviceFamily value="MSP430"/>
+	<createSlaveProjects value=""/>
+	<templateProperties value="id=OutOfBox_MSP430FR4133.projectspec.OutOfBox_MSP430FR4133"/>
+	<connection value="common/targetdb/connections/TIMSP430-USB.xml"/>
+	<activeTargetConfiguration value="targetConfigs/MSP430FR4133.ccxml"/>
+	<origin value="C:\ti\msp430ware_3_80_14_01\examples\boards\MSP-EXP430FR4133\MSP-EXP430FR4133_Software_Examples\Firmware\Source\OutOfBox_MSP430FR4133\CCS\OutOfBox_MSP430FR4133.projectspec"/>
+	<filesToOpen value="main.c"/>
+</projectOptions>
